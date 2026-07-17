@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-family, "PT Root UI", Arial, sans-serif);
+  background: var(--color-bg-default, #f4f5f7);
+  color: var(--color-typo-primary, #1c1c1e);
+}
+
+.app-sidebar {
+  background: #ffffff;
+  border-right: 1px solid var(--color-bg-border, #e2e3e8);
+}
+
+.sidebar-nav-button {
+  justify-content: flex-start !important;
+}
+
+.app-content {
+  max-width: 1200px;
+}
+
+.home-card {
+  background: #fff;
+  border: 1px solid var(--color-bg-border, #e2e3e8);
+  border-radius: 12px;
+  padding: 24px;
+  width: 300px;
+  box-shadow: 0 1px 2px rgba(20, 20, 25, 0.04);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.filters-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px 16px;
+  background: #fff;
+  border: 1px solid var(--color-bg-border, #e2e3e8);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.filters-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.field label {
+  font-weight: 500;
+  color: var(--color-typo-secondary, #5c5c66);
+}
+
+.field select,
+.field input[type="text"],
+.field input[type="checkbox"] {
+  font-family: inherit;
+}
+
+.field select,
+.field input[type="datetime-local"],
+.field input[type="text"],
+.field input[type="number"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-bg-border, #c9cad1);
+  font-size: 14px;
+  background: #fff;
+  font-family: inherit;
+}
+
+.field input[type="text"]:focus,
+.field input[type="number"]:focus,
+.field input[type="datetime-local"]:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--color-typo-brand, #3059e6);
+}
+
+.field input[disabled] {
+  background: var(--color-bg-ghost, #f4f5f7);
+  color: var(--color-typo-ghost, #8b8d97);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.data-table-wrap {
+  background: #fff;
+  border: 1px solid var(--color-bg-border, #e2e3e8);
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table.data-table th,
+table.data-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-bg-border, #eceef2);
+}
+
+table.data-table thead th {
+  background: var(--color-bg-ghost, #f7f8fa);
+  font-weight: 600;
+  user-select: none;
+  white-space: nowrap;
+}
+
+table.data-table th.sortable {
+  cursor: pointer;
+}
+
+table.data-table th.sortable:hover {
+  color: var(--color-typo-brand, #3059e6);
+}
+
+table.data-table tbody tr:hover {
+  background: var(--color-bg-ghost, #fafbfd);
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.empty-state, .loading-state, .error-state {
+  padding: 32px;
+  text-align: center;
+  color: var(--color-typo-secondary, #5c5c66);
+}
+
+.error-state {
+  color: var(--color-typo-alert, #cc3939);
+}
+
+.form-card {
+  background: #fff;
+  border: 1px solid var(--color-bg-border, #e2e3e8);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 640px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+}
+
+.form-grid .field-full {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.form-error {
+  background: #fdecec;
+  border: 1px solid #f3b7b7;
+  color: #a11a1a;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 25, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 360px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+}
+
+.modal-card h3 {
+  margin-top: 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
